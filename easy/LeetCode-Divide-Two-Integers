@@ -1,0 +1,24 @@
+/**
+ * @param {number} dividend
+ * @param {number} divisor
+ * @return {number}
+ * Simple division using repeated subtraction
+ */
+var divide = function(dividend, divisor) {
+    let quotient = 0;  // fixed variable name from 'quotion' to 'quotient'
+    
+    while (true) {
+        if (dividend - divisor >= 0) {
+            quotient++;
+            dividend -= divisor;
+        } else {
+            break;
+        }
+    }
+    return quotient;
+};
+
+// Example usage
+console.log(divide(15, 3)); // Output: 5
+console.log(divide(10, 3)); // Output: 3
+console.log(divide(7, 2));  // Output: 3
